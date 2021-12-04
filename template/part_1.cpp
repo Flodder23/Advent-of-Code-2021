@@ -3,10 +3,9 @@
 #include "read_input.cpp"
 
 void part_1() {
-	std::string input;
-	read_input(input);
+	read_input();
 
-	std::string output;
+	int output;
 
 	std::cout << output;
 }

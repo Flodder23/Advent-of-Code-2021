@@ -4,7 +4,7 @@
 #include <fstream>
 #include <string>
 
-void read_input(std::string& parsed) {
+void read_input() {
 	std::ifstream input("input.txt");
 	std::string in;
 	while (std::getline(input, in)) {

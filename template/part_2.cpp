@@ -2,11 +2,10 @@
 
 #include "read_input.cpp"
 
-void part_2() {
-	std::string input;
-	read_input(input);
+void part_1() {
+	read_input();
 
-	std::string output;
+	int output;
 
 	std::cout << output;
 }
