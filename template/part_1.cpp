@@ -2,10 +2,10 @@
 
 #include "read_input.cpp"
 
-void part_1() {
-	read_input();
+int part_1(const std::string& filename) {
+	read_input(filename);
 
 	int output;
 
-	std::cout << output;
+	return output;
 }

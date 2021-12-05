@@ -4,8 +4,8 @@
 #include <fstream>
 #include <string>
 
-void read_input() {
-	std::ifstream input("input.txt");
+void read_input(const std::string& filename) {
+	std::ifstream input(filename);
 	std::string in;
 	while (std::getline(input, in)) {
 		

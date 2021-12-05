@@ -2,9 +2,9 @@
 
 #include "read_input.cpp"
 
-void part_1() {
+int part_1(const std::string& filename) {
 	std::vector<int> input;
-	read_input(input);
+	read_input(filename, input);
 
 	int tot_increase = 0;
 	for (int i = 1; i < input.size(); i++) {
@@ -13,5 +13,5 @@ void part_1() {
 		}
 	}
 	
-	std::cout << tot_increase;
+	return tot_increase;
 }

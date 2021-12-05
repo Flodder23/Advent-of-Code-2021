@@ -30,8 +30,8 @@ void str_vec_to_int_vec(const std::vector<std::string>& str_vec, std::vector<int
 	}
 }
 
-void read_input(std::vector<int>& draw, std::vector<Board>& board) {
-	std::ifstream input("input.txt");
+void read_input(const std::string& filename, std::vector<int>& draw, std::vector<Board>& board) {
+	std::ifstream input(filename);
 	std::string in;
 
 	std::getline(input, in);

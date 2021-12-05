@@ -4,9 +4,9 @@
 
 #include "read_input.cpp"
 
-void part_1() {
+int part_1(const std::string& filename) {
 	std::vector<std::vector<int>> input;
-	read_input(input);
+	read_input(filename, input);
 	int len = input[0].size();
 	std::vector<int> num_zeros(len, 0);
 
@@ -27,5 +27,5 @@ void part_1() {
 		}
 	}
 
-	std::cout << gamma * epsilon;
+	return gamma * epsilon;
 }

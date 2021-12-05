@@ -49,9 +49,9 @@ int index_of_rating(const std::vector<std::vector<int>>& report, int mode) {
 	return -1;
 }
 
-void part_2() {
+int part_2(const std::string& filename) {
 	std::vector<std::vector<int>> input;
-	read_input(input);
+	read_input(filename, input);
 	int len = input[0].size();
 
 	int oxy_ind = index_of_rating(input, 1);
@@ -60,5 +60,5 @@ void part_2() {
 	int oxy = bin_to_dec(input[oxy_ind]);
 	int co2 = bin_to_dec(input[co2_ind]);
 
-	std::cout << oxy * co2;
+	return oxy * co2;
 }

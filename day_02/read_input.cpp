@@ -5,8 +5,8 @@
 #include <string>
 #include <vector>
 
-void read_input(std::vector<std::string>& direction, std::vector<int>& length) {
-	std::ifstream input("input.txt");
+void read_input(const std::string& filename, std::vector<std::string>& direction, std::vector<int>& length) {
+	std::ifstream input(filename);
 	std::string in;
 	while (std::getline(input, in)) {
 		direction.push_back(in.substr(0, 1));
