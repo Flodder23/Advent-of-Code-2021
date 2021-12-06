@@ -1,5 +1,3 @@
-#include <iostream>
-
 #include "read_input.cpp"
 
 int part_2(const std::string& filename) {
