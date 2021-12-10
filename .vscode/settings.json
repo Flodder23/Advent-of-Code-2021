@@ -55,6 +55,8 @@
 		"xlocmon": "cpp",
 		"xloctime": "cpp",
 		"xtree": "cpp",
-		"numeric": "cpp"
+		"numeric": "cpp",
+		"deque": "cpp",
+		"stack": "cpp"
 	}
 }
