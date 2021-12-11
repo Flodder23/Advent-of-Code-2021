@@ -31,5 +31,17 @@ void increment_octopus(int x, int y, std::vector<std::vector<int>>& octopi, int&
 		octopi[x][y] ++;
 	}
 }
+void increment_octopus(int x, int y, std::vector<std::vector<int>>& octopi) {
+	if (octopi[x][y] == 9) {
+		octopi[x][y] = -1;
+		std::vector<std::vector<int>> adj;
+		get_adj(x, y, octopi.size()-1, octopi[x].size()-1, adj);
+		for (std::vector<int> coords : adj) {
+			increment_octopus(coords[0], coords[1], octopi);
+		}
+	} else if (octopi[x][y] >= 0) {
+		octopi[x][y] ++;
+	}
+}
 
 #endif
