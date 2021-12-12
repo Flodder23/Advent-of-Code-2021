@@ -4,7 +4,7 @@
 
 #include "read_input.cpp"
 
-void explore(const std::string& cave, std::map<std::string, std::set<std::string>>& links, std::set<std::string> visited, int& valid) {
+void explore(const std::string& cave, std::map<std::string, std::set<std::string>>& links, std::set<std::string>& visited, int& valid) {
 	for (std::string c : links[cave]) {
 		if (std::islower(c[0])) {
 			if (visited.find(c) != visited.end()) {
