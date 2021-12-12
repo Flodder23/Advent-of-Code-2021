@@ -5,11 +5,7 @@
 #include <string>
 #include <vector>
 
-void str_to_vec_char(const std::string& str, std::vector<char>& vec_char) {
-	for (char c : str) {
-		vec_char.push_back(c);
-	}
-}
+#include "../general_functions.cpp"
 
 void read_input(const std::string& filename, std::vector<std::vector<char>>& chunks) {
 	std::ifstream input(filename);

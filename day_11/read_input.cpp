@@ -5,17 +5,7 @@
 #include <string>
 #include <vector>
 
-void vec_char_to_vec_int(const std::vector<char>& vec_char, std::vector<int>& vec_int) {
-	for (char c : vec_char) {
-		vec_int.push_back(std::atoi(&c));
-	}
-}
-
-void str_to_vec_char(const std::string& str, std::vector<char>& vec_char) {
-	for (char c : str) {
-		vec_char.push_back(c);
-	}
-}
+#include "../general_functions.cpp"
 
 void read_input(const std::string& filename, std::vector<std::vector<int>>& octopi) {
 	std::ifstream input(filename);

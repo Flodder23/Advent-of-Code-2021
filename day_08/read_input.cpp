@@ -7,25 +7,11 @@
 #include <string>
 #include <set>
 
+#include "../general_functions.cpp"
+
 typedef std::set<char> sc;
 typedef std::vector<sc> vsc;
 typedef std::vector<vsc> vvsc;
-
-void split_string(const std::string& str, const char& delim, std::vector<std::string>& vec) {
-	std::size_t curt = 0, next = 0;
-	while (true) {
-		next = str.find_first_of(delim, curt);
-		if (next == std::string::npos) {
-			vec.push_back(str.substr(curt));
-			return;
-		}
-		if (next != curt) {
-			vec.push_back(str.substr(curt, next-curt));
-		}
-		if (next == str.size()-1) { return; }
-		curt = next+1;
-	}
-}
 
 void str_to_sc(const std::string& str, sc& set_char) {
 	for (char c : str) {

@@ -8,27 +8,7 @@
 
 #include "board.cpp"
 
-void split_string(const std::string& str, const char& delim, std::vector<std::string>& vec) {
-	std::size_t curt = 0, next = 0;
-	while (true) {
-		next = str.find_first_of(delim, curt);
-		if (next == std::string::npos) {
-			vec.push_back(str.substr(curt));
-			return;
-		}
-		if (next != curt) {
-			vec.push_back(str.substr(curt, next-curt));
-		}
-		if (next == str.size()-1) { return; }
-		curt = next+1;
-	}
-}
-
-void str_vec_to_int_vec(const std::vector<std::string>& str_vec, std::vector<int>& int_vec) {
-	for (int i = 0; i < str_vec.size(); i++) {
-		int_vec.push_back(std::stoi(str_vec[i]));
-	}
-}
+#include "../general_functions.cpp"
 
 void read_input(const std::string& filename, std::vector<int>& draw, std::vector<Board>& board) {
 	std::ifstream input(filename);
@@ -37,7 +17,7 @@ void read_input(const std::string& filename, std::vector<int>& draw, std::vector
 	std::getline(input, in);
 	std::vector<std::string> draw_str;
 	split_string(in, ',', draw_str);
-	str_vec_to_int_vec(draw_str, draw);
+	vec_str_to_vec_int(draw_str, draw);
 
 	while (std::getline(input, in)) {
 		if (in.size() == 0) {
@@ -46,7 +26,7 @@ void read_input(const std::string& filename, std::vector<int>& draw, std::vector
 			std::vector<std::string> row_str;
 			split_string(in, ' ', row_str);
 			std::vector<int> row_int;
-			str_vec_to_int_vec(row_str, row_int);
+			vec_str_to_vec_int(row_str, row_int);
 			board[board.size()-1].add_row(row_int);
 		}
 	}
