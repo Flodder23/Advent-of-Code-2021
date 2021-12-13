@@ -16,11 +16,5 @@ int main() {
 	std::cout << part_1("input.txt");
 
 	std::cout << "\nPart 2: ";
-	std::string test_2_act = std::to_string(part_2("test_input.txt"));
-	std::string test_2_des; std::getline(test_answers, test_2_des);
-	if (test_2_act != test_2_des) {
-		std::cout << "Testing failed\nDesired: " << test_2_des << "\n Actual: " << test_2_act << "\n";
-		return 0;
-	}
-	std::cout << part_2("input.txt");
+	part_2("input.txt");
 }
