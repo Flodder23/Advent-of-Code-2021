@@ -7,11 +7,13 @@
 
 #include "../general_functions.cpp"
 
+typedef long long unsigned bigboi;
+
 struct pairInfo {
 	std::pair<char, char> pair;
 	char mapsto;
-	int cur_num;
-	int next_num;
+	bigboi cur_num;
+	bigboi next_num;
 };
 
 void read_input(const std::string& filename, std::string& poly, std::map<std::pair<char, char>, pairInfo>& pairs) {
