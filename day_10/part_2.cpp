@@ -6,8 +6,6 @@
 
 #include "read_input.cpp"
 
-typedef long long unsigned bigboi;
-
 bigboi part_2(const std::string& filename) {
 	std::vector<std::vector<char>> chunks;
 	read_input(filename, chunks);

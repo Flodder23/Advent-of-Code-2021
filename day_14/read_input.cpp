@@ -7,8 +7,6 @@
 
 #include "../general_functions.cpp"
 
-typedef long long unsigned bigboi;
-
 struct pairInfo {
 	std::pair<char, char> pair;
 	char mapsto;
