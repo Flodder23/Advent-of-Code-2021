@@ -4,16 +4,6 @@
 
 #include "read_input.cpp"
 
-int bin_to_dec(const std::vector<int>& num) {
-	int result = 0;
-	for (int i = 0; i < num.size(); i++) {
-		if (num[num.size() - i - 1] == 1) {
-			result += std::pow(2, i);
-		}
-	}
-	return result;
-}
-
 int index_of_rating(const std::vector<std::vector<int>>& report, int mode) {
 	std::vector<int> indices(report.size(), 1);
 	int num_left = indices.size();

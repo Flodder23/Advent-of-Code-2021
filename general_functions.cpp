@@ -3,6 +3,7 @@
 
 #include <string>
 #include <vector>
+#include <cmath>
 
 void split_string(const std::string& str, const char& delim, std::vector<std::string>& vec_str) {
 	std::size_t curt = 0, next = 0;
@@ -36,6 +37,16 @@ void vec_str_to_vec_int(const std::vector<std::string>& vec_str, std::vector<int
 	for (std::string str : vec_str) {
 		vec_int.push_back(std::stoi(str));
 	}
+}
+
+int bin_to_dec(const std::vector<int>& num) {
+	int result = 0;
+	for (int i = 0; i < num.size(); i++) {
+		if (num[num.size() - i - 1] == 1) {
+			result += std::pow(2, i);
+		}
+	}
+	return result;
 }
 
 #endif

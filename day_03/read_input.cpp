@@ -5,6 +5,8 @@
 #include <string>
 #include <vector>
 
+#include "general_functions.cpp"
+
 void read_input(const std::string& filename, std::vector<std::vector<int>>& parsed) {
 	std::ifstream input(filename);
 	std::string in;
