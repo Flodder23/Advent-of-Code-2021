@@ -31,7 +31,7 @@ void read_input(const std::string& filename, std::vector<int>& message) {
 	std::string in;
 	std::getline(input, in);
 	for (const char& c : in) {
-		for (const int& i : hex_conv[c]) {
+		for (const int& i : hex_conv[std::toupper(c)]) {
 			message.push_back(i);
 		}
 	}
